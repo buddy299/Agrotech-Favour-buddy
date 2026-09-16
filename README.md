@@ -1,2 +1,0 @@
-# Agrotech-Favour-buddy
-project
