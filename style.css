@@ -215,3 +215,63 @@ button {
 }
 
 
+/* Featured Farm Produce */
+
+.produce {
+    padding: 60px 8%;
+    background-color: beige;
+}
+
+.produce-container {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.produce-card {
+    width: 250px;
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px lightgray;
+}
+
+.produce-card img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+}
+
+.produce-info {
+    padding: 20px;
+}
+
+.produce-info h3 {
+    color: darkgreen;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.produce-info p {
+    color: black;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.produce-info h4 {
+    color: green;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.produce-info a {
+    display: block;
+    text-align: center;
+    background-color: green;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 6px;
+}
