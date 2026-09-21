@@ -7,7 +7,7 @@
 
     <link rel="stylesheet" href="style.css">
 
-    <script src="script.js"></script>
+   
 </head>
 <body>
 
@@ -16,10 +16,11 @@
             <h1>AgroLink</h1>
 
             <div class="nav-links">
-                <a href="#">Home</a>
-                <a href="#">Marketplace</a>
-                <a href="#">Prices</a>
-                <a href="#">AgroConnect</a>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="marketplace.html">Marketplace</a>
+                    <a href="prices.html">Prices</a>
+                    <a href="agroconnect.html">AgroConnect</a>
             </div>
 
             <button> Get started</button>
@@ -34,7 +35,7 @@
 
                 <h2>Connect Farmers<br>To Better oppurtunities</h2>
                 <p>Find buyers, check market prices ans discover agricultural services all in one place.</p>
-                <button>Explore Marketplace</button>
+                <a href="marketplace.html">Explore Marketplace</a>
             </div>
 
         </section>
@@ -46,6 +47,7 @@
                 <input type="text" id="location-input" placeholder="Location">
 
                 <button id="search-button">Search</button>
+                <p id="search-result"></p>
             </div>
 
         </section>
@@ -63,21 +65,21 @@
                     <img src="images/digital-marketplace.jpg" alt="dig">
                     <h3>Marketplace</h3>
                     <p>Connect with farmers and sell your products</p>
-                    <a href="#">Explore Marketplace</a>
+                    <a href="marketplace.html">Explore Marketplace</a>
                 </div>
 
                 <div class="AG-services">
                     <img src="images/prices.jpg" alt="price">
                     <h3>Market Prices</h3>
                     <p>Check agricultural market prices and make better selling decisions</p>
-                    <a href="#">View Prices</a>
+                    <a href="prices.html">View Prices</a>
                 </div>
 
                 <div class="AG-services">
                     <img src="images/handshake.jpg" alt="Connect">
                     <h3>AgroConnect</h3>
                     <p>Discover agricultural services, equipment, and useful farming resources</p>
-                    <a href="#">Connect</a>
+                    <a href="agroconnect.html">Connect</a>
                 </div>
             </div>
         </section>
@@ -91,47 +93,47 @@
 
     <div class="P-container">
 
-        <div class="produce-card">
+        <div class="produce-card" id="tomatoes">
             <img src="images/tomatoes.jpg" alt="Fresh tomatoes">
 
             <div class="produce-info">
                 <h3>Fresh Tomatoes</h3>
                 <p>Fresh tomatoes from local farmers</p>
                 <h4>₦15,000</h4>
-                <a href="#">View Produce</a>
+                <a href="marketplace.html">View Produce</a>
             </div>
         </div>
 
-        <div class="produce-card">
+        <div class="produce-card" id="maize">
             <img src="images/maize.jpg" alt="Maize">
 
             <div class="produce-info">
                 <h3>Maize</h3>
                 <p>Quality maize from local farms</p>
                 <h4>₦25,000</h4>
-                <a href="#">View Produce</a>
+                <a href="marketplace.html">View Produce</a>
             </div>
         </div>
 
-        <div class="produce-card">
+        <div class="produce-card" id="rice">
             <img src="images/rice.jpg" alt="Local rice">
 
             <div class="produce-info">
                 <h3>Local Rice</h3>
                 <p>Freshly harvested local rice</p>
                 <h4>₦45,000</h4>
-                <a href="#">View Produce</a>
+                <a href="marketplace.html">View Produce</a>
             </div>
         </div>
 
-        <div class="produce-card">
+        <div class="produce-card" id="cassava">
             <img src="images/cassava.jpg" alt="Cassava">
 
             <div class="produce-info">
                 <h3>Cassava</h3>
                 <p>Quality cassava from local farmers</p>
                 <h4>₦20,000</h4>
-                <a href="#">View Produce</a>
+                <a href="marketplace.html">View Produce</a>
             </div>
         </div>
 
@@ -140,5 +142,7 @@
 </section>
 
     </main>
+
+     <script src="script.js"></script>
 </body>
 </html>

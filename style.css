@@ -1,20 +1,22 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;    
+    box-sizing: border-box;
 }
 
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: beige;
-    color: beige;
+    color: black;
 }
+
+/* =========================
+   HEADER & NAVIGATION
+========================= */
 
 header {
     padding: 20px 5%;
 }
-
-/*Navigation*/
 
 nav {
     background-color: white;
@@ -42,6 +44,12 @@ nav h1 {
     font-size: 14px;
 }
 
+.nav-links a:hover {
+    color: green;
+}
+
+/* General buttons */
+
 button {
     background-color: green;
     color: white;
@@ -50,6 +58,15 @@ button {
     padding: 12px 22px;
     cursor: pointer;
 }
+
+button:hover {
+    background-color: darkgreen;
+}
+
+
+/* =========================
+   HERO SECTION
+========================= */
 
 .lol {
     display: flex;
@@ -91,27 +108,33 @@ button {
 }
 
 .lol-content p {
-    color: #555;
-    font-size: 17px;
+    color: black;
+    font-size: 15px;
     line-height: 1.6;
+    font-family: "Times New Roman", Times, serif;
 }
 
-.lol-content button {
+/* Explore Marketplace link */
+
+.lol-content a {
+    display: inline-block;
     margin-top: 15px;
     padding: 13px 25px;
-    border: none;
     border-radius: 6px;
     background-color: green;
     color: white;
+    text-decoration: none;
     font-size: 16px;
-    cursor: pointer;
 }
 
-.lol-content p{
-    color:black;
-    font-size: 15px;
-    font-family: 'Times New Roman', Times, serif;
+.lol-content a:hover {
+    background-color: darkgreen;
 }
+
+
+/* =========================
+   SEARCH SECTION
+========================= */
 
 .search {
     padding: 20px 8%;
@@ -125,6 +148,7 @@ button {
     display: flex;
     gap: 15px;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .search-bar input {
@@ -133,12 +157,34 @@ button {
     border: none;
     border-radius: 25px;
     outline: none;
-    font-size: 14px;
+    font-size: 17px;
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .search-bar button {
     padding: 14px 20px;
+    border: none;
+    outline: none;
 }
+
+.search-bar button:focus {
+    outline: none;
+}
+
+#search-result {
+    flex-basis: 100%;
+    color: darkgreen;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 5px;
+}
+
+
+/* =========================
+   SERVICES SECTION
+========================= */
 
 .services {
     padding: 60px 8%;
@@ -168,38 +214,38 @@ button {
     gap: 25px;
     justify-content: center;
     align-items: stretch;
+    flex-wrap: wrap;
 }
 
 .AG-services {
-   background-color: white;
-   box-shadow: 0 5px 20px lightgray;
-   border-radius: 20px;
-   display: flex;
-   flex-direction: column;
-   box-sizing: border-box;
-   width: 300px;
+    background-color: white;
+    box-shadow: 0 5px 20px lightgray;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    overflow: hidden;
 }
 
 .AG-services img {
     width: 100%;
     height: 180px;
     object-fit: cover;
-    border-radius: 8px;
     display: block;
 }
 
 .AG-services h3 {
     color: darkgreen;
     font-size: 22px;
-    margin-bottom: 12px;
+    margin: 20px 20px 12px;
 }
 
 .AG-services p {
     color: black;
     line-height: 1.6;
-    margin-bottom: 20px;
+    margin: 0 20px 20px;
     font-size: 15px;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: "Times New Roman", Times, serif;
     font-weight: bold;
 }
 
@@ -207,22 +253,29 @@ button {
     color: green;
     text-decoration: none;
     font-weight: bold;
-    margin-top: auto;
+    margin: auto 20px 20px;
     display: inline-block;
     text-align: center;
     border-radius: 5px;
     padding: 10px 20px;
 }
 
+.AG-services a:hover {
+    background-color: green;
+    color: white;
+}
 
-/* Featured Farm Produce */
+
+/* =========================
+   FEATURED FARM PRODUCE
+========================= */
 
 .produce {
     padding: 60px 8%;
     background-color: beige;
 }
 
-.produce-container {
+.P-container {
     display: flex;
     gap: 25px;
     justify-content: center;
@@ -235,12 +288,18 @@ button {
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 5px 20px lightgray;
+    transition: 0.3s;
+}
+
+.produce-card:hover {
+    transform: translateY(-5px);
 }
 
 .produce-card img {
     width: 100%;
     height: 170px;
     object-fit: cover;
+    display: block;
 }
 
 .produce-info {
@@ -274,4 +333,134 @@ button {
     text-decoration: none;
     padding: 10px;
     border-radius: 6px;
+}
+
+.produce-info a:hover {
+    background-color: darkgreen;
+}
+
+
+/* =========================
+   MARKETPLACE PAGE
+========================= */
+
+.marketplace {
+    padding: 60px 8%;
+    background-color: beige;
+    min-height: 80vh;
+}
+
+.marketplace .P-container {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+/* =========================
+   MARKET PRICES PAGE
+========================= */
+
+.prices {
+    padding: 60px 8%;
+    background-color: beige;
+    min-height: 80vh;
+}
+
+.price-container {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.price-card {
+    width: 250px;
+    background-color: white;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px lightgray;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.price-card:hover {
+    transform: translateY(-5px);
+}
+
+.price-card h3 {
+    color: darkgreen;
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.price-card p {
+    color: black;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.price-card h4 {
+    color: green;
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+
+/* =========================
+   AGROCONNECT PAGE
+========================= */
+
+.agroconnect {
+    padding: 60px 8%;
+    background-color: beige;
+    min-height: 80vh;
+}
+
+.connect-container {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.connect-card {
+    width: 280px;
+    background-color: white;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px lightgray;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.connect-card:hover {
+    transform: translateY(-5px);
+}
+
+.connect-card h3 {
+    color: darkgreen;
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.connect-card p {
+    color: black;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.connect-card a {
+    display: inline-block;
+    background-color: green;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+}
+
+.connect-card a:hover {
+    background-color: darkgreen;
 }
