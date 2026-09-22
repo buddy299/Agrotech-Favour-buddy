@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<title>Create Profile | AgroLink</title>
+
+<link rel="stylesheet" href="style.css">
+```
+
+</head>
+
+<body>
+
+```
+<header>
+    <nav>
+        <h1>AgroLink</h1>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="marketplace.html">Marketplace</a>
+            <a href="prices.html">Prices</a>
+            <a href="agroconnect.html">AgroConnect</a>
+        </div>
+
+        <button onclick="window.location.href='create-profile.html'">
+            Create Profile
+        </button>
+    </nav>
+</header>
+
+
+<main>
+
+    <section class="profile-form">
+
+        <div class="profile-form-title">
+
+            <p>JOIN AGROLINK</p>
+
+            <h2>Create Your Profile</h2>
+
+            <p>
+                Create a profile to showcase your products or services
+                and connect with potential buyers.
+            </p>
+
+        </div>
+
+
+        <form id="profileForm">
+
+            <label for="accountType">
+                What type of account are you creating?
+            </label>
+
+            <select id="accountType" required>
+
+                <option value="">
+                    Select account type
+                </option>
+
+                <option value="farmer">
+                    Individual Farmer
+                </option>
+
+                <option value="business">
+                    Business
+                </option>
+
+            </select>
+
+
+            <label for="name">
+                Your Name
+            </label>
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Enter your name"
+                required
+            >
+
+
+            <label for="farmName">
+                Farm / Business Name
+            </label>
+
+            <input
+                type="text"
+                id="farmName"
+                placeholder="Optional"
+            >
+
+
+            <label for="location">
+                Location
+            </label>
+
+            <input
+                type="text"
+                id="location"
+                placeholder="e.g. Lagos, Ogun, Kano"
+                required
+            >
+
+
+            <label for="products">
+                Products or Services
+            </label>
+
+            <input
+                type="text"
+                id="products"
+                placeholder="e.g. Rice, Maize, Vegetables"
+                required
+            >
+
+
+            <label for="description">
+                About You / Your Business
+            </label>
+
+            <textarea
+                id="description"
+                placeholder="Tell buyers about you, your farm, or your business"
+                required
+            ></textarea>
+
+
+            <button type="submit"> create-profile</button>
+
+`       </form>
+``
+    </section>
+
+</main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

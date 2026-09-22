@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Find Products | AgroLink</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <header>
+
+        <nav>
+
+            <h1>AgroLink</h1>
+
+            <div class="nav-links">
+
+                <a href="index.html">Home</a>
+
+                <a href="marketplace.html">
+                    Marketplace
+                </a>
+
+                <a href="prices.html">
+                    Prices
+                </a>
+
+                <a href="agroconnect.html">
+                    AgroConnect
+                </a>
+
+            </div>
+
+            <button
+                onclick="window.location.href='create-profile.html'"
+            >
+                Create Profile
+            </button>
+
+        </nav>
+
+    </header>
+
+
+
+    <main>
+
+
+        <section class="find-products">
+
+
+            <div class="title">
+
+                <p>AGROLINK MARKETPLACE</p>
+
+                <h2>Find Agricultural Products</h2>
+
+                <p>
+                    Browse products from farmers and sellers
+                    and find what you need.
+                </p>
+
+            </div>
+
+
+
+            <div class="marketplace-search">
+
+
+                <input
+                    type="text"
+                    id="product-search"
+                    placeholder="What are you looking for?"
+                >
+
+
+                <input
+                    type="text"
+                    id="location-search"
+                    placeholder="Location"
+                >
+
+
+                <button id="search-button">
+                    Search
+                </button>
+
+
+            </div>
+
+
+
+            <div id="seller-list">
+
+
+                <!-- GREEN VALLEY -->
+
+                <div class="seller-card">
+
+                    <h3>
+                        Green Valley Farms
+                    </h3>
+
+                    <p>
+                        📍 Lagos
+                    </p>
+
+                    <p>
+                        ⭐ 4.7
+                    </p>
+
+                    <p>
+                        Vegetables, Fruits, Seeds
+                    </p>
+
+                    <p>
+                        Fresh farm products available
+                        for buyers.
+                    </p>
+
+                    <a
+                        href="seller-profile.html?seller=green-valley"
+                    >
+                        View Profile
+                    </a>
+
+                </div>
+
+
+
+                <!-- FAVOUR'S FARM -->
+
+                <div class="seller-card">
+
+                    <h3>
+                        Favour's Farm
+                    </h3>
+
+                    <p>
+                        📍 Ogun
+                    </p>
+
+                    <p>
+                        ⭐ 4.5
+                    </p>
+
+                    <p>
+                        Grains, Tubers, Vegetables
+                    </p>
+
+                    <p>
+                        Locally grown agricultural
+                        products.
+                    </p>
+
+                    <a
+                        href="seller-profile.html?seller=favour-farm"
+                    >
+                        View Profile
+                    </a>
+
+                </div>
+
+
+
+                <!-- FRESHCATCH -->
+
+                <div class="seller-card">
+
+                    <h3>
+                        FreshCatch
+                    </h3>
+
+                    <p>
+                        📍 Lagos
+                    </p>
+
+                    <p>
+                        ⭐ 4.8
+                    </p>
+
+                    <p>
+                        Fish, Poultry
+                    </p>
+
+                    <p>
+                        Fresh fish and farm products
+                        available.
+                    </p>
+
+                    <a
+                        href="seller-profile.html?seller=freshcatch"
+                    >
+                        View Profile
+                    </a>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

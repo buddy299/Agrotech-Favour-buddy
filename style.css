@@ -1,3 +1,5 @@
+/* ─────────── GENERAL ─────────── */
+
 * {
     margin: 0;
     padding: 0;
@@ -10,9 +12,8 @@ body {
     color: black;
 }
 
-/* =========================
-   HEADER & NAVIGATION
-========================= */
+
+/* ─────────── NAVIGATION ─────────── */
 
 header {
     padding: 20px 5%;
@@ -48,8 +49,6 @@ nav h1 {
     color: green;
 }
 
-/* General buttons */
-
 button {
     background-color: green;
     color: white;
@@ -64,9 +63,7 @@ button:hover {
 }
 
 
-/* =========================
-   HERO SECTION
-========================= */
+/* ─────────── HOME INTRODUCTION ─────────── */
 
 .lol {
     display: flex;
@@ -85,7 +82,6 @@ button:hover {
     display: block;
     object-fit: contain;
     border-radius: 50px;
-    margin-top: 0;
 }
 
 .lol-content {
@@ -101,7 +97,7 @@ button:hover {
 }
 
 .lol-content h2 {
-    color: #173b2b;
+    color: darkgreen;
     font-size: 44px;
     line-height: 1.1;
     margin: 15px 0;
@@ -113,8 +109,6 @@ button:hover {
     line-height: 1.6;
     font-family: "Times New Roman", Times, serif;
 }
-
-/* Explore Marketplace link */
 
 .lol-content a {
     display: inline-block;
@@ -132,9 +126,7 @@ button:hover {
 }
 
 
-/* =========================
-   SEARCH SECTION
-========================= */
+/* ─────────── HOME SEARCH ─────────── */
 
 .search {
     padding: 20px 8%;
@@ -158,18 +150,11 @@ button:hover {
     border-radius: 25px;
     outline: none;
     font-size: 17px;
-    font-weight: 400;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .search-bar button {
     padding: 14px 20px;
-    border: none;
-    outline: none;
-}
-
-.search-bar button:focus {
-    outline: none;
 }
 
 #search-result {
@@ -182,11 +167,9 @@ button:hover {
 }
 
 
-/* =========================
-   SERVICES SECTION
-========================= */
+/* ─────────── HOME ABOUT AGROLINK ─────────── */
 
-.services {
+.about-agrolink {
     padding: 60px 8%;
     background-color: white;
 }
@@ -224,26 +207,19 @@ button:hover {
     display: flex;
     flex-direction: column;
     width: 300px;
-    overflow: hidden;
-}
-
-.AG-services img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    display: block;
+    padding: 25px;
 }
 
 .AG-services h3 {
     color: darkgreen;
     font-size: 22px;
-    margin: 20px 20px 12px;
+    margin-bottom: 12px;
 }
 
 .AG-services p {
     color: black;
     line-height: 1.6;
-    margin: 0 20px 20px;
+    margin-bottom: 20px;
     font-size: 15px;
     font-family: "Times New Roman", Times, serif;
     font-weight: bold;
@@ -253,7 +229,7 @@ button:hover {
     color: green;
     text-decoration: none;
     font-weight: bold;
-    margin: auto 20px 20px;
+    margin-top: auto;
     display: inline-block;
     text-align: center;
     border-radius: 5px;
@@ -266,23 +242,98 @@ button:hover {
 }
 
 
-/* =========================
-   FEATURED FARM PRODUCE
-========================= */
+/* ─────────── MARKETPLACE ─────────── */
 
-.produce {
+.marketplace {
     padding: 60px 8%;
     background-color: beige;
+    min-height: 80vh;
 }
 
-.P-container {
+.marketplace-search {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 40px auto;
+    max-width: 900px;
+}
+
+.marketplace-search input {
+    flex: 1;
+    min-width: 220px;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 15px;
+    outline: none;
+    box-shadow: 0 3px 15px lightgray;
+}
+
+.marketplace-search button {
+    padding: 15px 25px;
+}
+
+.marketplace-actions {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 30px 0 70px;
+}
+
+.marketplace-card {
+    width: 350px;
+    background-color: white;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px lightgray;
+    text-align: center;
+}
+
+.marketplace-card h3 {
+    color: darkgreen;
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+.marketplace-card p {
+    color: black;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.marketplace-card a {
+    display: inline-block;
+    background-color: green;
+    color: white;
+    text-decoration: none;
+    padding: 12px 22px;
+    border-radius: 6px;
+}
+
+.marketplace-card a:hover {
+    background-color: darkgreen;
+}
+
+
+/* ─────────── MARKETPLACE LISTINGS ─────────── */
+
+.marketplace-listings {
+    padding: 60px 8%;
+    background-color: white;
+}
+
+.listing-container {
     display: flex;
     gap: 25px;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-.produce-card {
+.listing-card {
     width: 250px;
     background-color: white;
     border-radius: 20px;
@@ -291,41 +342,41 @@ button:hover {
     transition: 0.3s;
 }
 
-.produce-card:hover {
+.listing-card:hover {
     transform: translateY(-5px);
 }
 
-.produce-card img {
+.listing-card img {
     width: 100%;
     height: 170px;
     object-fit: cover;
     display: block;
 }
 
-.produce-info {
+.listing-info {
     padding: 20px;
 }
 
-.produce-info h3 {
+.listing-info h3 {
     color: darkgreen;
     font-size: 20px;
     margin-bottom: 8px;
 }
 
-.produce-info p {
-    color: black;
-    font-size: 14px;
-    line-height: 1.5;
+.listing-info h4 {
+    color: green;
+    font-size: 18px;
     margin-bottom: 12px;
 }
 
-.produce-info h4 {
-    color: green;
-    font-size: 18px;
-    margin-bottom: 15px;
+.listing-info p {
+    color: black;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 8px;
 }
 
-.produce-info a {
+.listing-info a {
     display: block;
     text-align: center;
     background-color: green;
@@ -333,34 +384,143 @@ button:hover {
     text-decoration: none;
     padding: 10px;
     border-radius: 6px;
+    margin-top: 15px;
 }
 
-.produce-info a:hover {
+.listing-info a:hover {
     background-color: darkgreen;
 }
 
 
-/* =========================
-   MARKETPLACE PAGE
-========================= */
+/* ─────────── FIND PRODUCTS ─────────── */
 
-.marketplace {
+.find-products {
     padding: 60px 8%;
     background-color: beige;
     min-height: 80vh;
 }
 
-.marketplace .P-container {
+#seller-list {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.seller-card {
+    width: 300px;
+    background-color: white;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px lightgray;
+    transition: 0.3s;
+}
+
+.seller-card:hover {
+    transform: translateY(-5px);
+}
+
+.seller-card h3 {
+    color: darkgreen;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.seller-card p {
+    color: black;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+.seller-card a {
+    display: inline-block;
+    margin-top: 15px;
+    background-color: green;
+    color: white;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+}
+
+.seller-card a:hover {
+    background-color: darkgreen;
+}
+
+
+/* ─────────── SELLER PROFILE ─────────── */
+
+.seller-profile {
+    padding: 60px 8%;
+    background-color: beige;
+    min-height: 80vh;
+}
+
+.seller-profile-info {
+    background-color: white;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px lightgray;
+}
+
+.seller-profile-info h2 {
+    color: darkgreen;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.seller-profile-info p {
+    color: black;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+#message-seller {
+    margin-top: 15px;
+}
+
+.seller-products {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.seller-products > h2 {
+    color: darkgreen;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.seller-product-list {
     display: flex;
     gap: 25px;
     justify-content: center;
     flex-wrap: wrap;
 }
 
+.seller-product {
+    width: 210px;
+    background-color: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px lightgray;
+}
 
-/* =========================
-   MARKET PRICES PAGE
-========================= */
+.seller-product h3 {
+    color: darkgreen;
+    margin-bottom: 10px;
+}
+
+.seller-product p {
+    color: black;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+/* ─────────── PRICES ─────────── */
 
 .prices {
     padding: 60px 8%;
@@ -408,9 +568,7 @@ button:hover {
 }
 
 
-/* =========================
-   AGROCONNECT PAGE
-========================= */
+/* ─────────── AGROCONNECT ─────────── */
 
 .agroconnect {
     padding: 60px 8%;
@@ -463,4 +621,110 @@ button:hover {
 
 .connect-card a:hover {
     background-color: darkgreen;
+}
+
+/* CREATE PROFILE PAGE */
+
+.profile-form {
+max-width: 650px;
+margin: 60px auto;
+padding: 45px;
+background-color: white;
+border-radius: 25px;
+box-shadow: 0 8px 25px lightgray;
+}
+
+.profile-form-title {
+text-align: center;
+margin-bottom: 35px;
+}
+
+.profile-form-title p:first-child {
+color: green;
+font-size: 13px;
+font-weight: bold;
+letter-spacing: 2px;
+margin-bottom: 8px;
+}
+
+.profile-form-title h2 {
+color: darkgreen;
+font-size: 32px;
+margin: 0 0 12px;
+}
+
+.profile-form-title p:last-child {
+color: gray;
+line-height: 1.6;
+margin: 0;
+}
+
+/* FORM */
+
+#profileForm {
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
+
+#profileForm label {
+color: darkgreen;
+font-weight: bold;
+margin-top: 12px;
+}
+
+/* INPUTS AND DROPDOWN */
+
+#profileForm input,
+#profileForm select,
+#profileForm textarea {
+width: 100%;
+box-sizing: border-box;
+padding: 14px 16px;
+border: 1px solid lightgray;
+border-radius: 10px;
+background-color: beige;
+color: darkgreen;
+font-size: 15px;
+font-family: Arial, sans-serif;
+}
+
+#profileForm input::placeholder,
+#profileForm textarea::placeholder {
+color: gray;
+}
+
+/* WHEN CLICKED */
+
+#profileForm input:focus,
+#profileForm select:focus,
+#profileForm textarea:focus {
+outline: none;
+border: 2px solid green;
+background-color: white;
+}
+
+/* DESCRIPTION BOX */
+
+#profileForm textarea {
+min-height: 130px;
+resize: vertical;
+}
+
+/* CREATE PROFILE BUTTON */
+
+#profileForm button {
+margin-top: 25px;
+padding: 15px;
+background-color: darkgreen;
+color: white;
+border: none;
+border-radius: 12px;
+font-size: 16px;
+font-weight: bold;
+cursor: pointer;
+}
+
+#profileForm button:hover {
+background-color: green;
 }

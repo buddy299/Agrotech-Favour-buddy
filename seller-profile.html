@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Seller Profile | AgroLink</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <nav>
+
+            <h1>AgroLink</h1>
+
+            <div class="nav-links">
+
+                <a href="index.html">Home</a>
+                <a href="marketplace.html">Marketplace</a>
+                <a href="prices.html">Prices</a>
+                <a href="agroconnect.html">AgroConnect</a>
+
+            </div>
+
+            <button onclick="window.location.href='create-profile.html'">
+                Create Profile
+            </button>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <section class="seller-profile">
+
+            <div class="seller-profile-info">
+
+                <h2 id="profile-farm-name"></h2>
+
+                <p id="profile-owner"></p>
+
+                <p id="profile-location"></p>
+
+                <p id="profile-rating"></p>
+
+                <p id="profile-products"></p>
+
+                <p id="profile-description"></p>
+
+                <button id="message-seller">
+                    Message Seller
+                </button>
+
+            </div>
+
+
+            <div class="seller-products">
+
+                <h2>Available Products</h2>
+
+                <div
+                    class="seller-product-list"
+                    id="seller-product-list">
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -33,53 +33,147 @@
 
             <div class="title">
                 <p>AGROLINK MARKETPLACE</p>
-                <h2>Fresh Products From Local Farmers</h2>
+                <h2>Buy and Sell Agricultural Products</h2>
+                <p>
+                    Find agricultural products from sellers or connect
+                    with buyers looking for what you have to offer.
+                </p>
             </div>
 
-            <div class="P-container">
 
-                <div class="produce-card">
-                    <img src="images/tomatoes.jpg" alt="Fresh tomatoes">
+            <div class="marketplace-search">
 
-                    <div class="produce-info">
+                <input
+                    type="text"
+                    placeholder="What are you looking for?"
+                >
+
+                <input
+                    type="text"
+                    placeholder="Location"
+                >
+
+                <button>Search</button>
+
+            </div>
+
+
+            <div class="marketplace-actions">
+
+                <div class="marketplace-card">
+
+                    <h3>I'm Looking to Buy</h3>
+
+                    <p>
+                        Find agricultural products and sellers
+                        based on what you need.
+                    </p>
+
+                    <a href="find-products.html">Find Products</a>
+
+                </div>
+
+
+                <div class="marketplace-card">
+
+                    <h3>I'm Looking to Sell</h3>
+
+                    <p>
+                        List your agricultural products and reach
+                        potential buyers.
+                    </p>
+
+                    <a href="sell-product.html">Sell a Product</a>
+
+                </div>
+
+            </div>
+
+
+            <div class="title">
+
+                <p>AVAILABLE PRODUCTS</p>
+
+                <h2>Explore Agricultural Products</h2>
+
+            </div>
+
+        </section>
+
+        <section class="marketplace-listings">
+
+            <div class="title">
+                <p>AVAILABLE LISTINGS</p>
+                <h2>Products From Sellers</h2>
+            </div>
+
+            <div class="listing-container">
+
+                <div class="listing-card">
+
+                    <img src="images/tomatoes.jpg" alt="Seller's tomatoes">
+
+                    <div class="listing-info">
+
                         <h3>Fresh Tomatoes</h3>
-                        <p>Fresh tomatoes from local farmers</p>
+
                         <h4>₦15,000</h4>
-                        <a href="#">View Produce</a>
+
+                        <p>Quantity: 10 baskets</p>
+
+                        <p>Location: Lagos</p>
+
+                        <p>Seller: Local Farm</p>
+
+                        <a href="seller-profile.html?seller=local-farm">View Details</a>
                     </div>
+
                 </div>
 
-                <div class="produce-card">
-                    <img src="images/maize.jpg" alt="Maize">
 
-                    <div class="produce-info">
+                <div class="listing-card">
+
+                    <img src="images/maize.jpg" alt="Seller's maize">
+
+                    <div class="listing-info">
+
                         <h3>Maize</h3>
-                        <p>Quality maize from local farms</p>
+
                         <h4>₦25,000</h4>
-                        <a href="#">View Produce</a>
+
+                        <p>Quantity: 20 bags</p>
+
+                        <p>Location: Kano</p>
+
+                        <p>Seller: Green Fields Farm</p>
+
+                        <a href="#">View Details</a>
+
                     </div>
+
                 </div>
 
-                <div class="produce-card">
-                    <img src="images/rice.jpg" alt="Local rice">
 
-                    <div class="produce-info">
+                <div class="listing-card">
+
+                    <img src="images/rice.jpg" alt="Seller's rice">
+
+                    <div class="listing-info">
+
                         <h3>Local Rice</h3>
-                        <p>Freshly harvested local rice</p>
+
                         <h4>₦45,000</h4>
-                        <a href="#">View Produce</a>
-                    </div>
-                </div>
 
-                <div class="produce-card">
-                    <img src="images/cassava.jpg" alt="Cassava">
+                        <p>Quantity: 15 bags</p>
 
-                    <div class="produce-info">
-                        <h3>Cassava</h3>
-                        <p>Quality cassava from local farmers</p>
-                        <h4>₦20,000</h4>
-                        <a href="#">View Produce</a>
+                        <p>Location: Kaduna</p>
+
+                        <p>Seller: Sunrise Farms</p>
+
+                        <a href="#">View Details</a>
+
                     </div>
+
                 </div>
 
             </div>
@@ -87,7 +181,7 @@
         </section>
 
     </main>
-
+<script src="script.js"></script>
 </body>
 
 </html>
