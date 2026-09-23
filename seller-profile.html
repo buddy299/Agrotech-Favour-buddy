@@ -59,6 +59,8 @@
                     Message Seller
                 </button>
 
+                <button id="delete-profile-button">Delete Profile</button>
+
             </div>
 
 
@@ -77,7 +79,50 @@
 
     </main>
 
+<div id="delete-popup" class="delete-popup">
 
+    <div class="delete-popup-box">
+
+        <h2>Delete Profile?</h2>
+
+        <p>
+            Are you sure you want to delete your profile?
+            This action cannot be undone.
+        </p>
+
+        <div class="delete-popup-buttons">
+
+            <button id="cancel-delete">
+                Cancel
+            </button>
+
+            <button id="confirm-delete">
+                Delete
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div id="delete-success-popup" class="delete-popup">
+
+    <div class="delete-popup-box">
+
+        <h2>Profile Deleted</h2>
+
+        <p>
+            Your AgroLink profile has been deleted successfully.
+        </p>
+
+        <button id="success-ok">
+            OK
+        </button>
+
+    </div>
+
+</div>
     <script src="script.js"></script>
 
 </body>

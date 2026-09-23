@@ -14,9 +14,12 @@ if (searchButton && searchInput && locationInput) {
         let sellerCards = document.querySelectorAll(".seller-card");
 
         sellerCards.forEach(function(card) {
+
             card.style.display = "block";
             card.style.border = "none";
+
         });
+
 
         if (search === "" || location === "") {
 
@@ -25,12 +28,15 @@ if (searchButton && searchInput && locationInput) {
 
         }
 
+
         let product = search.toLowerCase();
         let found = false;
+
 
         sellerCards.forEach(function(card) {
 
             let cardText = card.textContent.toLowerCase();
+
 
             if (
                 cardText.includes(product) &&
@@ -48,9 +54,12 @@ if (searchButton && searchInput && locationInput) {
 
         });
 
+
         if (!found) {
 
-            alert("Sorry, we could not find that product in that location.");
+            alert(
+                "Sorry, we could not find that product in that location."
+            );
 
         }
 
@@ -89,7 +98,8 @@ const sellers = [
         farmName: "Green Valley Farms",
         location: "Lagos",
         products: "Vegetables, Fruits, Seeds",
-        description: "Fresh agricultural products available from our farm.",
+        description:
+            "Fresh agricultural products available from our farm.",
         rating: "4.7"
     }
 
@@ -98,13 +108,16 @@ const sellers = [
 
 /* ─────────── CREATE NEW PROFILE ─────────── */
 
-const profileForm = document.getElementById("profileForm");
+const profileForm =
+    document.getElementById("profileForm");
+
 
 if (profileForm) {
 
     profileForm.addEventListener("submit", function(event) {
 
         event.preventDefault();
+
 
         const newProfile = {
 
@@ -134,7 +147,9 @@ if (profileForm) {
 
 
         let savedSellers =
-            JSON.parse(localStorage.getItem("agrolinkSellers")) || [];
+            JSON.parse(
+                localStorage.getItem("agrolinkSellers")
+            ) || [];
 
 
         savedSellers.push(newProfile);
@@ -146,11 +161,15 @@ if (profileForm) {
         );
 
 
-        alert("Your AgroLink profile has been created!");
+        alert(
+            "Your AgroLink profile has been created!"
+        );
 
+
+        /* GO TO THE USER'S PERSONAL PROFILE */
 
         window.location.href =
-            "seller-profile.html?seller=" + newProfile.id;
+            "my-profile.html";
 
     });
 
@@ -160,13 +179,16 @@ if (profileForm) {
 /* ─────────── DISPLAY SELLER PROFILE ─────────── */
 
 const sellerId =
-    new URLSearchParams(window.location.search).get("seller");
+    new URLSearchParams(window.location.search)
+        .get("seller");
 
 
 if (sellerId) {
 
     let savedSellers =
-        JSON.parse(localStorage.getItem("agrolinkSellers")) || [];
+        JSON.parse(
+            localStorage.getItem("agrolinkSellers")
+        ) || [];
 
 
     let allSellers =
@@ -184,28 +206,41 @@ if (sellerId) {
     if (selectedSeller) {
 
         const farmName =
-            document.getElementById("profile-farm-name");
+            document.getElementById(
+                "profile-farm-name"
+            );
 
         const owner =
-            document.getElementById("profile-owner");
+            document.getElementById(
+                "profile-owner"
+            );
 
         const location =
-            document.getElementById("profile-location");
+            document.getElementById(
+                "profile-location"
+            );
 
         const rating =
-            document.getElementById("profile-rating");
+            document.getElementById(
+                "profile-rating"
+            );
 
         const products =
-            document.getElementById("profile-products");
+            document.getElementById(
+                "profile-products"
+            );
 
         const description =
-            document.getElementById("profile-description");
+            document.getElementById(
+                "profile-description"
+            );
 
 
         if (farmName) {
 
             farmName.textContent =
-                selectedSeller.farmName || selectedSeller.name;
+                selectedSeller.farmName ||
+                selectedSeller.name;
 
         }
 
@@ -213,7 +248,8 @@ if (sellerId) {
         if (owner) {
 
             owner.textContent =
-                "Seller: " + selectedSeller.name;
+                "Seller: " +
+                selectedSeller.name;
 
         }
 
@@ -221,7 +257,8 @@ if (sellerId) {
         if (location) {
 
             location.textContent =
-                "📍 " + selectedSeller.location;
+                "📍 " +
+                selectedSeller.location;
 
         }
 
@@ -229,7 +266,8 @@ if (sellerId) {
         if (rating) {
 
             rating.textContent =
-                "⭐ " + selectedSeller.rating;
+                "⭐ " +
+                selectedSeller.rating;
 
         }
 
@@ -253,7 +291,9 @@ if (sellerId) {
         /* ─────────── SHOW SELLER'S PRODUCTS ─────────── */
 
         const productList =
-            document.getElementById("seller-product-list");
+            document.getElementById(
+                "seller-product-list"
+            );
 
 
         if (productList) {
@@ -301,7 +341,9 @@ const sellerList =
 if (sellerList) {
 
     const savedSellers =
-        JSON.parse(localStorage.getItem("agrolinkSellers")) || [];
+        JSON.parse(
+            localStorage.getItem("agrolinkSellers")
+        ) || [];
 
 
     savedSellers.forEach(function(seller) {
@@ -346,5 +388,238 @@ if (sellerList) {
         sellerList.appendChild(sellerCard);
 
     });
+
+}
+
+
+/* ─────────── DISPLAY MY PROFILE ─────────── */
+
+const myProfileName =
+    document.getElementById(
+        "my-profile-name"
+    );
+
+const myProfileFarm =
+    document.getElementById(
+        "my-profile-farm"
+    );
+
+const myProfileLocation =
+    document.getElementById(
+        "my-profile-location"
+    );
+
+const myProfileDescription =
+    document.getElementById(
+        "my-profile-description"
+    );
+
+
+if (myProfileName) {
+
+    const savedSellers =
+        JSON.parse(
+            localStorage.getItem("agrolinkSellers")
+        ) || [];
+
+
+    /* GET THE MOST RECENTLY CREATED PROFILE */
+
+    const myProfile =
+        savedSellers[
+            savedSellers.length - 1
+        ];
+
+
+    const noProfileMessage =
+        document.getElementById(
+            "no-profile-message"
+        );
+
+
+    if (myProfile) {
+
+        myProfileName.textContent =
+            myProfile.name;
+
+
+        myProfileFarm.textContent =
+            myProfile.farmName ||
+            "No farm or business name";
+
+
+        myProfileLocation.textContent =
+            "📍 " +
+            myProfile.location;
+
+
+        myProfileDescription.textContent =
+            myProfile.description;
+
+
+        /* HIDE CREATE PROFILE MESSAGE */
+
+        if (noProfileMessage) {
+
+            noProfileMessage.style.display =
+                "none";
+
+        }
+
+    } else {
+
+        /* SHOW CREATE PROFILE MESSAGE */
+
+        if (noProfileMessage) {
+
+            noProfileMessage.style.display =
+                "block";
+
+        }
+
+    }
+
+}
+
+
+/* ─────────── DELETE SELLER PROFILE ─────────── */
+
+const deleteProfileButton =
+    document.getElementById(
+        "delete-profile-button"
+    );
+
+const deletePopup =
+    document.getElementById(
+        "delete-popup"
+    );
+
+const cancelDelete =
+    document.getElementById(
+        "cancel-delete"
+    );
+
+const confirmDelete =
+    document.getElementById(
+        "confirm-delete"
+    );
+
+const deleteSuccessPopup =
+    document.getElementById(
+        "delete-success-popup"
+    );
+
+const successOk =
+    document.getElementById(
+        "success-ok"
+    );
+
+
+if (deleteProfileButton && sellerId) {
+
+    const savedSellers =
+        JSON.parse(
+            localStorage.getItem("agrolinkSellers")
+        ) || [];
+
+
+    /* CHECK IF THIS IS A USER-CREATED PROFILE */
+
+    const profileExists =
+        savedSellers.some(function(seller) {
+
+            return seller.id === sellerId;
+
+        });
+
+
+    /* HIDE DELETE BUTTON FOR BUILT-IN PROFILES */
+
+    if (!profileExists) {
+
+        deleteProfileButton.style.display =
+            "none";
+
+    }
+
+
+    /* OPEN DELETE POPUP */
+
+    deleteProfileButton.addEventListener(
+        "click",
+        function() {
+
+            deletePopup.style.display =
+                "flex";
+
+        }
+    );
+
+
+    /* CANCEL DELETE */
+
+    cancelDelete.addEventListener(
+        "click",
+        function() {
+
+            deletePopup.style.display =
+                "none";
+
+        }
+    );
+
+
+    /* CONFIRM DELETE */
+
+    confirmDelete.addEventListener(
+        "click",
+        function() {
+
+            const updatedSellers =
+                savedSellers.filter(
+                    function(seller) {
+
+                        return seller.id !== sellerId;
+
+                    }
+                );
+
+
+            /* SAVE UPDATED SELLER LIST */
+
+            localStorage.setItem(
+                "agrolinkSellers",
+                JSON.stringify(
+                    updatedSellers
+                )
+            );
+
+
+            /* CLOSE DELETE POPUP */
+
+            deletePopup.style.display =
+                "none";
+
+
+            /* SHOW SUCCESS POPUP */
+
+            deleteSuccessPopup.style.display =
+                "flex";
+
+        }
+    );
+
+
+    /* CLOSE SUCCESS POPUP */
+
+    successOk.addEventListener(
+        "click",
+        function() {
+
+            window.location.href =
+                "marketplace.html";
+
+        }
+    );
 
 }
