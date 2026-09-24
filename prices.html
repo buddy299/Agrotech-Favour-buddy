@@ -33,45 +33,48 @@
 
             <div class="title">
                 <p>AGRICULTURAL MARKET PRICES</p>
+
                 <h2>Check Current Farm Produce Prices</h2>
+
+                <p>
+                    View agricultural prices sourced from Nigerian market data.
+                </p>
             </div>
 
-            <div class="price-container">
+            <div class="price-search">
 
-                <div class="price-card">
-                    <h3>Tomatoes</h3>
-                    <p>Current market price</p>
-                    <h4>₦15,000</h4>
-                    <p>Per basket</p>
-                </div>
+                <input
+                    type="text"
+                    id="price-search"
+                    placeholder="Search for a product..."
+                >
 
-                <div class="price-card">
-                    <h3>Maize</h3>
-                    <p>Current market price</p>
-                    <h4>₦25,000</h4>
-                    <p>Per bag</p>
-                </div>
+                <select id="price-category">
+                    <option value="all">All Agricultural Products</option>
+                    <option value="agriculture">Agriculture</option>
+                    <option value="food-staples">Food Staples</option>
+                </select>
 
-                <div class="price-card">
-                    <h3>Local Rice</h3>
-                    <p>Current market price</p>
-                    <h4>₦45,000</h4>
-                    <p>Per bag</p>
-                </div>
+                <button id="price-search-button">
+                    Search
+                </button>
 
-                <div class="price-card">
-                    <h3>Cassava</h3>
-                    <p>Current market price</p>
-                    <h4>₦20,000</h4>
-                    <p>Per bag</p>
-                </div>
+            </div>
+
+            <div id="price-results" class="price-container">
+
+                <p class="price-loading">
+                    Loading current market prices...
+                </p>
 
             </div>
 
         </section>
 
     </main>
-<script src="script.js"></script>
+
+    <script src="script.js"></script>
+
 </body>
 
 </html>
